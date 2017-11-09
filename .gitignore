@@ -49,3 +49,6 @@ jspm_packages
 .yarn-integrity
 
 public/*.bundle.js*
+
+**.bundle.js
+*/pubilc

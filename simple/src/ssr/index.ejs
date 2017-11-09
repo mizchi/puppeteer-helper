@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%
+      require('babel-register');
+      const React = require('react')
+      const ReactDOM = require('react-dom/server');
+      const App = require('../components/App').default;
+    %>
+    <div id='app-root'><%= ReactDOM.renderToString(React.createElement(App)) %></div>
+    <script src="index.bundle.js"></script>
+  </body>
+</html>
