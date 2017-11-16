@@ -1,5 +1,6 @@
 {
   "name": "@mizchi/puppeteer-helper",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "author": "mizchi <miz404@gmail.com>",
   "license": "MIT",
