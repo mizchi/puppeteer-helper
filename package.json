@@ -1,7 +1,10 @@
 {
   "name": "@mizchi/puppeteer-helper",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
+  "bin": {
+    "get-puppeteer-metrics": "bin/get-puppeteer-metrics"
+  },
   "author": "mizchi <miz404@gmail.com>",
   "license": "MIT",
   "scripts": {

@@ -28,8 +28,10 @@ export type Metrics = {
   NavigationStart: number
 }
 
-export function getPerformanceMetrics(page: any): Promise<Metrics> {
-  return page.metrics()
+export async function getPerformanceMetrics(page: any): Promise<Metrics> {
+  // return page.metrics()
+  const { metrics } = await page._client.send('Performance.getMetrics')
+  return metrics.reduce((acc, i) => ({ ...acc, [i.name]: i.value }), {})
 }
 
 export function diffMetrics(prev: Metrics, next: Metrics): Metrics {
