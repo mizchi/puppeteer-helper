@@ -51,4 +51,4 @@ jspm_packages
 public/*.bundle.js*
 
 **.bundle.js
-*/pubilc
+lib

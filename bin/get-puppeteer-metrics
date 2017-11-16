@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+const puppeteer = require('puppeteer')
+const { run } = require('../lib')
+const path = require('path')
+
+const targetUrl = process.argv[2]
+let scenario = []
+try {
+  if (process.argv[3]) {
+    scenario = require(path.join(process.cwd(), process.argv[3]))
+  }
+} catch (e) {
+}
+
+async function start() {
+  const browser = await puppeteer.launch({})
+  await run(browser, targetUrl, scenario)
+  await browser.close()
+}
+
+start()
